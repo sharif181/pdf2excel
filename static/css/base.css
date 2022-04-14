@@ -1,0 +1,50 @@
+.card {
+    margin-top: 100px;
+}
+
+.btn-upload {
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.upload-input-group {
+    margin-bottom: 10px;
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    height: 45px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 20px;
+    line-height: 2px;
+    margin: 2rem auto !important;
+}
+
+.first-button {
+    margin-bottom: 5rem !important;
+}
+
+
+/*
+form {
+    margin-top: 100px;
+}
+
+input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+} */

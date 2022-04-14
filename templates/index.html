@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="float-left title"><strong>Pdf or Image to convert Excel</strong> </div>
+
+                        </div>
+                        <div class="card-body card-block">
+{#                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">#}
+                                <div class="row form-group">
+                                    <div class="col-12 col-md-12">
+                                        <form action="{% url 'home' %}"  enctype="multipart/form-data" method="post" class="control-group first-form" id="fields">
+                                            {% csrf_token %}
+                                            <label class="control-label sub-title" for="field1">
+                                                Pdf to Excel
+                                            </label>
+                                            <div class="controls">
+                                                <div class="entry input-group upload-input-group">
+                                                    <input class="form-control" name="pdf_file" id="pdf_file" type="file">
+                                                </div>
+
+                                            </div>
+                                            <button class="btn btn-success first-button" type="submit">Convert Excel</button>
+                                        </form>
+
+                                        <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data" class="control-group" id="fields">
+                                            {% csrf_token %}
+                                            <label class="control-label sub-title" for="field1">
+                                                Image to Excel
+                                            </label>
+                                            <div class="controls">
+                                                <div class="entry input-group upload-input-group">
+                                                    <input class="form-control" name="image_file" id="image_file" type="file" accept="image/*">
+                                                </div>
+
+                                            </div>
+                                            <button class="btn btn-success">Convert Excel</button>
+                                        </form>
+
+                                    {% if table_url %}
+
+                                        <a href="{{ table_url }}" class="m-2 btn btn-success">Download line items</a>
+                                        <a href="{{ other_url }}" class="m-2 btn btn-success">Download Summary fields</a>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+
+{#                            </form>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
